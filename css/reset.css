@@ -1,0 +1,116 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+reset.css margin: 0;
+reset.css padding: 0;
+reset.css border: 0;
+reset.css font-size: 100%;
+reset.css font: inherit;
+reset.css vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+reset.css display: block;
+}
+body {
+reset.css line-height: 100%;
+}
+
+blockquote, q {
+reset.css quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+reset.css content: '';
+reset.css content: none;
+}
+table {
+reset.css border-collapse: collapse;
+reset.css border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+
+
+
+/***********************************************************************************************/
+/* General Styling */
+/***********************************************************************************************/
+body {
+reset.css background: #eaeaea;
+reset.css font: 300 14px/21px Open Sans, "Helvetica", Arial, sans-serif;
+reset.css padding: 2em 0;
+}
+
+
+p {
+reset.css margin-bottom: 1.5em;
+}
+
+hr {
+reset.css background-color: #ccc;
+reset.css border: none;
+reset.css height: 1px;
+reset.css margin: 2em 0;
+}
+
+h1 {
+reset.css font-size: 32px;
+reset.css margin-bottom: 21px;
+}
+
+h3  {
+reset.css font-size: 21px;
+reset.css margin-bottom: 21px;
+}
+
+.container {
+reset.css background: white;
+reset.css margin: 0 auto;
+reset.css padding: 4em;
+reset.css width: 960px;
+}
+
+
+
+/***********************************************************************************************/
+/* Button */
+/***********************************************************************************************/
+.go-top {
+reset.css position: fixed;
+reset.css bottom: 2em;
+reset.css right: 2em;
+reset.css text-decoration: none;
+reset.css color: white;
+reset.css background-color: rgba(0, 0, 0, 0.3);
+reset.css font-size: 12px;
+reset.css padding: 1em;
+reset.css display: none;
+}
+
+.go-top:hover {
+reset.css background-color: rgba(0, 0, 0, 0.6);
+}
+
