@@ -13,6 +13,9 @@ This is a simple web-interface/controller for Raspberry Pi Camera.
 
 #Screenshots
 
+![Stream MJPEG](https://raw.githubusercontent.com/lzto/rpi-cam/master/img/mov.gif "Stream MPJEG")
+
+
 ![Desktop](https://raw.githubusercontent.com/lzto/rpi-cam/master/img/desktop.png "Desktop")
 
 ![Mobile](https://raw.githubusercontent.com/lzto/rpi-cam/master/img/mobile.png "Mobile")
