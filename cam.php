@@ -110,7 +110,7 @@ function get() {
 	{
 		echo '<div class="well">';
 		echo '<center>';
-		echo '<img class="img-responsive" style="width:512px;height:288px" src="http://znbs.space:8081/">';
+		echo '<img class="img-responsive" style="width:512px" src="http://znbs.space:8081/">';
 		echo '<p><span class="glyphicon glyphicon-record" aria-hidden="true"><h4>Live</h4></span></p>';
 		echo '<p><h1>'.
 			'<a href="#" onclick="pantilt(10,0)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>'.
@@ -151,7 +151,7 @@ function get() {
 	{
 		echo '<div class="well">';
 		echo '<center>';
-		echo '<img src="lastsnap.jpg" class="img-responsive" alt="lastsnap.jpg" style="width:512px;height:288px">';
+		echo '<img src="lastsnap.jpg" class="img-responsive" alt="lastsnap.jpg" style="width:512px">';
 		echo '<p><span class="glyphicon glyphicon-flash" aria-hidden="true"><h4>Current Snapshot</h4></span></p>';
 		echo '<a href=cam.php?date=live><span class="glyphicon glyphicon-record" aria-hidden="true"></span> Switch to live</a>';
 		echo '</center>';
@@ -172,7 +172,7 @@ function get() {
 	{
 		echo '<div class="well">';
 		echo '<center>';
-		echo '<img src="mvideo.php?date='.$c_date.'" class="img-responsive" alt="mvideo.php" style="width:512px;height:288px">';
+		echo '<img src="mvideo.php?date='.$c_date.'" class="img-responsive" alt="mvideo.php" style="width:512px">';
 		echo '<p><span class="glyphicon glyphicon-play" aria-hidden="true"><h4>>></h4></span></p>';
 		echo '<a href=cam.php?date='.$c_date.'><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> List Frames</a>';
 		echo '</center>';
@@ -198,7 +198,7 @@ function get() {
 			{
 				echo '<div class="col-xs-6 col-sm-4">';
 				echo '<a href="#" class="thumbnail">';
-				echo '<img src="'.$c_date.'/'.$d.'" alt="'.$d.'" style="width:300px;height:168.75px">';
+				echo '<img src="'.$c_date.'/'.$d.'" alt="'.$d.'" style="width:300px">';
 				echo '</a>';
 				echo '</div>';
 			}
