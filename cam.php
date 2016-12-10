@@ -9,30 +9,40 @@
 
 		<link rel="icon" type="image/png" href="images/favicon.png" />
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link href="css/simple-sidebar.css" rel="stylesheet">
 		<link href="css/dashboard.css" rel="stylesheet">
 	</head>
 
 <body>
+	<script src="js/jquery.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="cam.php?date=current">
 				<img alt="coco" src="coco.png" width="32" height="32">
 				</a>
 			</div>
-		<div id="navbar" class="navbar-collapse collapse">
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="http://coco.local">Camera@Coco.local</a></li>
-			</ul>
-		</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+				<li class="active">
+					<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Record Date</a>
+				</li>
+				</ul>
+			</div>
 		</div>
 
 	</nav>
-	<div class="container-fluid">
-		<div class="row">
-		<div class="col-sm-3 col-md-2 sidebar">
-			<p>Date</p>
-			<ul class="nav nav-sidebar">
+	<div id="wrapper">
+	<div id="sidebar-wrapper">
+		<ul class="sidebar-nav">
+		<li class="sidebar-brand">Date</li>
 <?php
 $pwd='/mnt/usb/cam';
 $contents = scandir($pwd,SCANDIR_SORT_DESCENDING);
@@ -86,7 +96,10 @@ foreach($contents as $d)
 ?>
 			</ul><!--nav nav-sidebar-->
 		</div>
-		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+		<!-- /#sidebar-wrapper -->
+		<div id="page-content-wrapper">
+		<div class="jumbotron">
+		<div class="container-fluid">
 <?php
 
 function get() {
@@ -106,6 +119,8 @@ function get() {
 			'<a href="#" onclick="pantilt(-10,0)"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>'.
 			'</h1></p>';
 		echo '</center>';
+		echo '</div>'."\n";
+		echo '</div>'."\n";
 		echo '</div>'."\n";
 		$pd='90';
 		$td='90';
@@ -141,6 +156,8 @@ function get() {
 		echo '<a href=cam.php?date=live><span class="glyphicon glyphicon-record" aria-hidden="true"></span> Switch to live</a>';
 		echo '</center>';
 		echo '</div>';
+		echo '</div>';
+		echo '</div>';
 		return;
 	}
 
@@ -159,6 +176,8 @@ function get() {
 		echo '<p><span class="glyphicon glyphicon-play" aria-hidden="true"><h4>>></h4></span></p>';
 		echo '<a href=cam.php?date='.$c_date.'><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> List Frames</a>';
 		echo '</center>';
+		echo '</div>';
+		echo '</div>';
 		echo '</div>';
 		return;
 	}
@@ -240,6 +259,8 @@ function get() {
 	echo '</ul>';
 	echo "</nav>\n";
 	echo "</div>\n";
+	echo "</div>\n";
+	echo "</div>\n";
 }
 
 function main() {
@@ -253,6 +274,15 @@ main();
 
 
 </div>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
 
 </body>
 </html>
