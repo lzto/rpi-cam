@@ -1,12 +1,29 @@
 <?php
 
+function scan_dir($dir) {
+	$ignored = array('.', '..', '.svn', '.htaccess');
+
+	$files = array();
+	foreach (scandir($dir) as $file) {
+		if (in_array($file, $ignored)) continue;
+		$files[$file] = filemtime($dir . '/' . $file);
+	}
+
+	arsort($files);
+	$files = array_keys($files);
+
+	return ($files) ? $files : false;
+}
+
 $c_date = basename(isset($_GET['date']) ? $_GET['date'] : date("Y_m_d"));
 
 # Based on - http://ben-collins.blogspot.com/2010/06/php-sending-motion-jpeg.html
 # Used to separate multipart
 $boundary = "my_mjpeg";
 
-$images=scandir($c_date);
+#$images=scandir($c_date);
+$images=array_reverse(scan_dir($c_date));
+
 $cur_img=2;
 
 # We start with the standard headers. PHP allows us this much
